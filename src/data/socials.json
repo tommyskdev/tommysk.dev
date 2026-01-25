@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/tommyskdev",
+    "icon": "fab fa-github",
+    "username": "tommyskdev"
+  },
+  {
+    "name": "Discord",
+    "url": "https://discord.com/users/youruserid",
+    "icon": "fab fa-discord",
+    "username": "yourname#0000"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/yourusername",
+    "icon": "fab fa-instagram",
+    "username": "@yourusername"
+  },
+  {
+    "name": "TikTok",
+    "url": "https://tiktok.com/@yourusername",
+    "icon": "fab fa-tiktok",
+    "username": "@yourusername"
+  },
+  {
+    "name": "Email",
+    "url": "mailto:your.email@example.com",
+    "icon": "fas fa-envelope",
+    "username": "your.email@example.com"
+  }
+]

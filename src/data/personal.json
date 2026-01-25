@@ -1,0 +1,9 @@
+{
+  "name": "Tommy SK",
+  "title": "Full Stack Developer",
+  "bio": "Hi, I'm Tommy, a teenager with love for engineering and tinkering.",
+  "location": "Bratislava, Slovakia",
+  "timezone": "Europe/Bratislava",
+  "avatar": "/assets/profile.jpg",
+  "available": true
+}
