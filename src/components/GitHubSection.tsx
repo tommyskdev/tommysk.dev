@@ -30,12 +30,10 @@ export default function GitHubSection({ username }: GitHubSectionProps) {
   useEffect(() => {
     const fetchGitHub = async () => {
       try {
-        // Fetch user data
         const userResponse = await fetch(`https://api.github.com/users/${username}`);
         const userData = await userResponse.json();
         setGithub(userData);
 
-        // Fetch repos to calculate total stars
         const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
         const repos = await reposResponse.json();
         
@@ -87,19 +85,16 @@ export default function GitHubSection({ username }: GitHubSectionProps) {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.card}>
+        <a
+          href={github.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.cardLink}
+        >
+          <div className={styles.card}>
           <div className={styles.header}>
             <i className="fab fa-github"></i>
             <h3>GitHub Profile</h3>
-            <a 
-              href={github.html_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.viewProfile}
-            >
-              View Profile
-              <i className="fas fa-external-link-alt"></i>
-            </a>
           </div>
 
           <div className={styles.profile}>
@@ -171,7 +166,8 @@ export default function GitHubSection({ username }: GitHubSectionProps) {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+        </a>
       </div>
     </section>
   );

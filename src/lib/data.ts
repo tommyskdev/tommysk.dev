@@ -50,10 +50,6 @@ export function getProjectById(id: string): Project | undefined {
   }
 }
 
-export function getProjectsByCategory(category: string): Project[] {
-  return getAllProjects().filter(project => project.category === category);
-}
-
 export function getAboutContent(): string {
   const filePath = path.join(dataDir, 'about.json');
   const fileContents = fs.readFileSync(filePath, 'utf8');

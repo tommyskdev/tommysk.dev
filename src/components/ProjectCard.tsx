@@ -11,7 +11,8 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className={styles.card}>
+    <Link href={`/projects/details?id=${project.id}`} className={styles.cardLink}>
+      <div className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
           src={project.image}
@@ -21,40 +22,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className={styles.overlay}>
-          <div className={styles.links}>
-            {project.links?.github && (
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.iconLink}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <i className="fab fa-github"></i>
-              </a>
-            )}
-            {project.links?.live && (
-              <a
-                href={project.links.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.iconLink}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <i className="fas fa-external-link-alt"></i>
-              </a>
-            )}
-            {project.links?.demo && (
-              <a
-                href={project.links.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.iconLink}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <i className="fas fa-play"></i>
-              </a>
-            )}
+          <div className={styles.viewProject}>
+            <i className="fas fa-arrow-right"></i>
+            <span>View Project</span>
           </div>
         </div>
       </div>
@@ -75,5 +45,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
     </div>
+    </Link>
   );
 }

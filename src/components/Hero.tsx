@@ -34,7 +34,6 @@ export default function Hero({ personalInfo, socialLinks }: HeroProps) {
     <section className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.content}>
-          {/* Left: Profile Photo */}
           <div className={styles.profileWrapper}>
             <Image
               src={personalInfo.avatar}
@@ -46,17 +45,9 @@ export default function Hero({ personalInfo, socialLinks }: HeroProps) {
             />
           </div>
 
-          {/* Middle: Text Info */}
           <div className={styles.info}>
             <h1 className={styles.name}>{personalInfo.name}</h1>
             <p className={styles.title}>{personalInfo.title}</p>
-            
-            {personalInfo.available && (
-              <div className={styles.status}>
-                <span className={styles.statusDot}></span>
-                <span>Open for opportunities</span>
-              </div>
-            )}
 
             <div className={styles.locationTime}>
               <div className={styles.location}>
@@ -67,9 +58,8 @@ export default function Hero({ personalInfo, socialLinks }: HeroProps) {
             </div>
           </div>
 
-          {/* Right: Social Links Panel */}
           <div className={styles.socialPanel}>
-            <h3>Connect</h3>
+            <h3>Connect with me</h3>
             <div className={styles.socialLinks}>
               {socialLinks.map((link) => (
                 <a

@@ -1,0 +1,14 @@
+{
+  "id": "portfolio-website",
+  "title": "Portfolio Website",
+  "description": "The site you're currently visiting, cool right?",
+  "longDescription": "This portfolio is built with Next.js, TypeScript, modern CSS, animated gradients, and live integrations to showcase work and presence in one place.",
+  "image": "/assets/projects/portfolio.svg",
+  "tags": ["Next.js", "TypeScript", "React", "CSS3"],
+  "category": "web",
+  "featured": true,
+  "links": {
+    "live": "/"
+  },
+  "date": "2025-01"
+}

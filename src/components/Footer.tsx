@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getSocialLinks } from '@/lib/data';
 import styles from './Footer.module.css';
 
@@ -15,7 +16,6 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
-              title={link.name}
               aria-label={link.name}
             >
               <i className={link.icon}></i>
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
         
         <div className={styles.branding}>
-          <span>tommysk.dev</span>
+          <Link href="/">tommysk.dev</Link>
         </div>
       </div>
     </footer>

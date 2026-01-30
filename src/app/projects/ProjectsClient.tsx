@@ -13,13 +13,11 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Get unique categories
   const categories = useMemo(() => {
     const cats = new Set(projects.map(p => p.category));
     return ['all', ...Array.from(cats)];
   }, [projects]);
 
-  // Filter projects
   const filteredProjects = useMemo(() => {
     return projects.filter(project => {
       const matchesSearch = 
@@ -37,7 +35,6 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>All Projects</h1>
           <p className={styles.subtitle}>
@@ -45,9 +42,7 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
           </p>
         </div>
 
-        {/* Filters */}
         <div className={styles.filters}>
-          {/* Search */}
           <div className={styles.searchWrapper}>
             <i className="fas fa-search"></i>
             <input
@@ -68,7 +63,6 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
             )}
           </div>
 
-          {/* Category filters */}
           <div className={styles.categories}>
             {categories.map(category => (
               <button
@@ -84,14 +78,12 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
           </div>
         </div>
 
-        {/* Results count */}
         <div className={styles.resultsInfo}>
           <p>
             Showing {filteredProjects.length} of {projects.length} projects
           </p>
         </div>
 
-        {/* Projects grid */}
         {filteredProjects.length > 0 ? (
           <div className={styles.grid}>
             {filteredProjects.map((project, index) => (

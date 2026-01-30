@@ -7,26 +7,26 @@
   },
   {
     "name": "Discord",
-    "url": "https://discord.com/users/youruserid",
+    "url": "https://discord.com/users/tommyskdev",
     "icon": "fab fa-discord",
-    "username": "yourname#0000"
+    "username": "tommyskdev"
   },
   {
     "name": "Instagram",
-    "url": "https://instagram.com/yourusername",
+    "url": "https://instagram.com/tommy_sk0",
     "icon": "fab fa-instagram",
-    "username": "@yourusername"
+    "username": "@tommy_sk0"
   },
   {
     "name": "TikTok",
-    "url": "https://tiktok.com/@yourusername",
+    "url": "https://tiktok.com/@tommy_sk0",
     "icon": "fab fa-tiktok",
-    "username": "@yourusername"
+    "username": "@tommy_sk0"
   },
   {
     "name": "Email",
-    "url": "mailto:your.email@example.com",
+    "url": "mailto:tomasmolnar@tommysk.dev",
     "icon": "fas fa-envelope",
-    "username": "your.email@example.com"
+    "username": "tomasmolnar@tommysk.dev"
   }
 ]

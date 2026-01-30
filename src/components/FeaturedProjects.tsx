@@ -18,7 +18,10 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               Some of my recent work
             </p>
           </div>
-          <Link href="/projects" className={styles.viewAllBtn}>
+          <Link
+            href="/projects"
+            className={styles.viewAllBtn}
+          >
             View All Projects
             <i className="fas fa-arrow-right"></i>
           </Link>
