@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Link href={`/projects/details?id=${project.id}`} className={styles.cardLink}>
+    <Link href={`/projects/${project.id}`} className={styles.cardLink}>
       <div className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
